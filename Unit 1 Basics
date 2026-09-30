@@ -1,0 +1,42 @@
+#include <iostream>
+using namespace std;
+
+class Student
+{
+private:
+    int rollNo;          // Data Member
+
+public:
+    string name;         // Data Member
+    float marks;        // Data Member
+
+    // Member Function
+    void setData(int r, float m)
+    {
+        rollNo = r;
+        marks = m;
+    }
+
+    // Member Function
+    void displayData()
+    {
+        cout << "Name: " << name << endl;
+        cout << "Roll No: " << rollNo << endl;
+        cout << "Marks: " << marks << endl;
+    }
+};
+
+int main()
+{
+    // Object Creation
+    Student s1;
+
+    // Assigning data
+    s1.name = "Karan";
+    s1.setData(101, 85.5);
+
+    // Calling member function
+    s1.displayData();
+
+    return 0;
+}
